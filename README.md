@@ -4,7 +4,6 @@
 
 # Helm App life-cycle management:
 
-
 * helm repo add stable https://charts.helm.sh/stable
 * helm repo update
 * helm repo list
