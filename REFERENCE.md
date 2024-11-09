@@ -1,5 +1,6 @@
 # Commands Reference
 
+* Quick cheat sheet for helm operations
 
 # Helm App life-cycle management:
 
@@ -13,10 +14,14 @@
 
 # Helm Chart Creation
 
-* Generate boilerplate: helm create my-chart
+* Generate boilerplate: `helm create my-chart`
+* Check the chart syntax: `helm lint`
 * Add kubernetes manifests to the ./templates directory
-* Package the chart: helm package my-chart
-* install the chart: helm install my-release my-chart-<version>.tgz
+* Package the chart: `helm package my-chart`
+* install the chart: `helm install my-release my-chart-<version>.tgz`
+* Check wether values are getting substituted in the helm chart: `helm template`
+* Helm dry run: `helm install --dry-run <release-name> <chart-name>`
+* Rolling back Helm changes: `helm rollback`
 
 # Helm Pre-install Hooks
 
@@ -41,5 +46,5 @@ spec:
 
 # A skeleton Helm Charted Application
 
-
-* https://github.com/devopsjourney1/helm-webapp
+* Sample chart: https://github.com/devopsjourney1/helm-webapp
+* Tutorial video: https://www.youtube.com/watch?v=jUYNS90nq8U
