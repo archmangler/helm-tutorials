@@ -46,5 +46,6 @@ spec:
 
 # A skeleton Helm Charted Application
 
+* Getting Started: https://helm.sh/docs/chart_template_guide/getting_started/
 * Sample chart: https://github.com/devopsjourney1/helm-webapp
 * Tutorial video: https://www.youtube.com/watch?v=jUYNS90nq8U

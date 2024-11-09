@@ -4,12 +4,13 @@
 
 # Helm App life-cycle management:
 
-* helm repo add stable https://charts.helm.sh/stable
-* helm repo update
-* helm repo list
-* override default values provided by a chart: helm show values stable/mysql > my-values.yaml 
-* install using custom values: helm install my-mysql -f my-values.yaml stable/mysql
-* upgrade the release: helm upgrade my-mysql -f my-values.yaml stable/mysql
+* Add the helm repo: `helm repo add stable https://charts.helm.sh/stable`
+* Update the repo: `helm repo update`
+* List installed repos `helm repo list`
+* override default values provided by a chart: `helm show values stable/mysql > my-values.yaml`
+* install using custom values: `helm install my-mysql -f my-values.yaml stable/mysql`
+* upgrade the release: `helm upgrade my-mysql -f my-values.yaml stable/mysql`
+* Get application release details: `helm get manifest full-coral`
 
 # Helm Chart Creation
 
@@ -20,6 +21,7 @@
 * install the chart: `helm install my-release my-chart-<version>.tgz`
 * Check wether values are getting substituted in the helm chart: `helm template`
 * Helm dry run: `helm install --dry-run <release-name> <chart-name>`
+* Debug Helm dry run: `helm install --debug --dry-run <release name> ./mychart`
 * Rolling back Helm changes: `helm rollback`
 
 # Helm Pre-install Hooks
